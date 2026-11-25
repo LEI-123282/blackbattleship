@@ -12,7 +12,7 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import java.time.Duration;
 import java.util.logging.Level;
 import java.util.logging.Logger;
-
+//s
 public class MainPageTest {
     private WebDriver driver;
     private MainPage mainPage;
