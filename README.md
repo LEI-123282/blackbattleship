@@ -94,10 +94,10 @@ Product Backlog estruturado em *User Stories* Scrum numeradas, elaborado a parti
 - [ ] Disponibilidade de múltiplos níveis de dificuldade.
 
 ### US-09 — Jogar com um amigo através de hiperligação direta (*Play with a friend*)
-> **Enquanto** jogador, **quero** gerar uma sala privada e partilhar uma hiperligação única com um amigo, **para que** possamos jogar Batalha Naval num clique sem obrigação de criar conta.
+> **Enquanto** jogador, **quero** gerar uma sala privada e partilhar uma hiperligação única com um amigo, **para que** possamos jogar Batalha Naval num clique.
 
 - [ ] Geração instantânea de URL de convite.
-- [ ] Início automático da partida assim que o segundo jogador acede à ligação, mesmo em modo convidado.
+- [ ] Início automático da partida assim que o segundo jogador acede à ligação.
 
 ### US-10 — Preenchimento automático de filas com bots transparentes nas regras
 > **Enquanto** gestor da plataforma, **quero** que o sistema possa atribuir adversários automatizados em filas públicas durante períodos de baixa afluência, **para que** os tempos de espera se mantenham reduzidos e as estatísticas continuem a funcionar.
