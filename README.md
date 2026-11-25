@@ -152,4 +152,121 @@ Product Backlog estruturado em *User Stories* Scrum numeradas, elaborado a parti
 - [ ] Configuração de séries (À melhor de 1, 3 ou 5) e tempo limite por turno/jogador.
 - [ ] Acesso à área «My tournaments».
 
-### US-17 — Organização de eventos de grande escala sem anún
+### US-17 — Organização de eventos de grande escala sem anúncios (*Plano Gruppo*)
+> **Enquanto** organizador escolar, terapeuta ou líder de equipa remota, **quero** subscrever o passe *Gruppo* (30 dias ou anual), **para que** possa realizar torneios ilimitados com mais de 4 participantes e num ambiente sem anúncios seguro para crianças.
+
+- [ ] Remoção do limite gratuito de 4 jogadores.
+- [ ] Emparelhamento automático de participantes.
+- [ ] Bloqueio total de publicidade e filtragem de conteúdo sensível para todos os participantes do torneio.
+
+---
+
+## Épico 5: Classificações (*Leaderboards*), ELO e Sistema *RANKA*
+
+### US-18 — Classificação geral deslizante de 30 dias (*RANKA*)
+> **Enquanto** jogador competitivo, **quero** acumular pontos *RANKA* com base nos meus resultados acima de 1000 pontos nos torneios diários dos últimos 30 dias, **para que** a minha consistência diária seja refletida na tabela geral.
+
+- [ ] Conversão do excedente acima de 1000 pontos no fim de cada torneio diário em pontos *RANKA*.
+- [ ] Expiração automática dos pontos ganhos após 31 dias.
+
+### US-19 — Distribuição automática de prémios e troféus de torneio
+> **Enquanto** participante de torneios diários, **quero** receber notificações e recompensas em moedas de jogo no encerramento de cada torneio consoante a minha posição final, **para que** o meu desempenho competitivo seja recompensado.
+
+- [ ] Atribuição escalonada de moedas no encerramento do torneio:
+
+| Classificação Final | Recompensa em Moedas |
+| :--- | :--- |
+| 1.º Lugar | `+1000` moedas |
+| 2.º Lugar | `+700` moedas |
+| 3.º Lugar | `+500` moedas |
+| 4.º Lugar | `+400` moedas |
+| 5.º Lugar | `+490` moedas |
+| Posições seguintes | Decréscimo de `10` moedas por posição (mínimo de `+100` moedas) |
+
+### US-20 — Cálculo de classificação ELO e visualização de repetições (*Replays*)
+> **Enquanto** jogador de Batalha Naval, **quero** acompanhar a evolução da minha pontuação ELO e rever partidas anteriores jogada a jogada, **para que** possa analisar os meus erros e melhorar a minha tática.
+
+- [ ] Atualização de ELO após vitórias e derrotas (sem alteração em empates).
+- [ ] Leitor de repetições no historial de partidas com controlos de avanço e recuo responsivos em telemóveis e computadores.
+
+---
+
+## Épico 6: Economia Virtual, Loja (*Shop*) e Subscrição *Plus*
+
+### US-21 — Aquisição e gestão de moedas virtuais
+> **Enquanto** jogador, **quero** receber moedas gratuitas no registo e em torneios, bem como comprar pacotes adicionais na loja, **para que** tenha saldo para personalizar a minha conta.
+
+- [ ] Integração de pagamentos via Xsolla na versão web, Apple App Store no iOS e Google Play no Android.
+- [ ] Saldo intransmissível e sem valor monetário real.
+
+### US-22 — Compra de avatares, emojis e multiplicadores na Loja (*Shop*)
+> **Enquanto** jogador, **quero** gastar as minhas moedas na loja online para desbloquear avatares («Monsters»), *emojis* e multiplicadores de pontos (*Boosters*), **para que** possa expressar-me nas partidas e acelerar a minha pontuação.
+
+- [ ] Catálogo dividido por categorias (`Coins`, `Monsters`, `Emojis`, `Boosters`).
+- [ ] Aplicação correta de multiplicadores de pontos (ex.: *Booster* x2) nos torneios elegíveis.
+
+### US-23 — Remoção de anúncios para ambos os jogadores (*Papergames Plus*)
+> **Enquanto** subscritor do plano *Plus* (mensal ou anual), **quero** jogar sem anúncios e remover também os anúncios do ecrã do meu adversário durante as nossas partidas, **para que** ambos tenhamos uma experiência limpa e sem distrações.
+
+- [ ] Processamento de subscrição via Stripe.
+- [ ] Caixa de verificação obrigatória no *checkout* sobre o início imediato do serviço e renúncia ao direito de retratação de 14 dias (UE).
+- [ ] Cancelamento autónomo nas definições da conta.
+
+---
+
+## Épico 7: Funcionalidades Sociais, Comunicação e Moderação
+
+### US-24 — Gestão de amigos e caixa de entrada privada (*Inbox*)
+> **Enquanto** jogador com conta, **quero** enviar e aceitar pedidos de amizade e trocar mensagens persistentes na caixa de entrada com os meus amigos, **para que** possamos combinar partidas de Batalha Naval.
+
+- [ ] Envio de mensagens privadas permitido apenas após aceitação mútua de amizade.
+- [ ] Armazenamento do histórico de conversas.
+- [ ] Notificações *push* e por e-mail para novas mensagens.
+
+### US-25 — Chat efémero em partida e envio de *emojis*
+> **Enquanto** jogador numa partida ativa, **quero** enviar mensagens de texto (até 2000 caracteres) e *emojis* ao meu adversário em tempo real, **para que** possamos reagir às jogadas durante o duelo.
+
+- [ ] Mensagens visíveis apenas para os dois jogadores (ocultas para espectadores) e nunca armazenadas após o fim da partida.
+- [ ] Hiperligações apresentadas apenas como texto simples sem pré-visualização.
+
+### US-26 — Moderação automática por IA e filtros de conteúdo
+> **Enquanto** administrador da plataforma, **quero** que nomes de exibição, mensagens de chat/inbox e textos de torneios sejam verificados automaticamente por listas de palavras proibidas e modelos de IA (OpenAI), **para que** a comunidade se mantenha segura e livre de abuso.
+
+- [ ] Substituição imediata de nomes impróprios por nomes gerados pelo sistema (confiança `>85%`).
+- [ ] Ocultação/remoção automática de mensagens sinalizadas.
+- [ ] Bloqueio na gravação de torneios com títulos ou descrições ofensivas.
+
+### US-27 — Denúncia de jogadores, bloqueio e medidas disciplinares
+> **Enquanto** jogador, **quero** denunciar e bloquear utilizadores por abuso verbal, batota, inatividade propositada (*stalling*) ou manipulação de classificação (*sandbagging*), **para que** comportamentos tóxicos sejam punidos.
+
+- [ ] Formulário de denúncia por categorias com opção de bloqueio imediato.
+- [ ] Escalamento prioritário para moderadores humanos (resposta até 4 horas).
+- [ ] Banimento automático à segunda advertência do mesmo tipo, restringindo contas banidas a partidas contra robôs e bloqueando IP/dispositivo.
+
+### US-28 — Deteção anti-batota em tempo real
+> **Enquanto** sistema de jogo, **quero** verificar a existência de *scripts* de batota conhecidos no navegador ao entrar em filas de torneio e validar estados no servidor (Redis), **para que** a integridade competitiva da Batalha Naval seja preservada.
+
+- [ ] Sinalização automática de contas que utilizem *scripts* externos ou manipulação de pedidos.
+
+---
+
+## Épico 8: Multiplataforma Móvel e API *Games as a Service* (GaaS)
+
+### US-29 — Experiência nativa nas aplicações móveis iOS e Android
+> **Enquanto** utilizador de smartphone, **quero** jogar Batalha Naval nas aplicações oficiais da Google Play Store e Apple App Store sem anúncios e com reconexão imediata ao desbloquear o ecrã, **para que** possa jogar confortavelmente em mobilidade.
+
+- [ ] Ausência de anúncios nas aplicações móveis.
+- [ ] Notificações *push* via Firebase/APNs.
+- [ ] Reconexão automática de sessão WebSocket após suspensão do telemóvel.
+
+### US-30 — Integração da Batalha Naval em plataformas externas via API (*GaaS*)
+> **Enquanto** programador ou empresa parceira, **quero** gerar chaves de API (ambientes `dev`, `preprod` e `prod`) e iniciar sessões de Batalha Naval incorporáveis via `iframe` na minha aplicação ou intranet, **para que** os meus utilizadores possam jogar sem sair do meu produto.
+
+- [ ] Disponibilização de plano gratuito (até 150 pedidos/mês) e plano *Pro* (pedidos ilimitados, acesso a todos os jogos incluindo Batalha Naval e remoção da marca Papergames.io).
+- [ ] Suporte a modos *Player vs Player* e *Player vs Random*.
+
+### US-31 — Monitorização de *Webhooks* e registos HTTP no portal de programadores
+> **Enquanto** integrador da API *Games as a Service*, **quero** configurar *endpoints* de *webhooks* e consultar os registos de pedidos HTTP no painel de programador, **para que** receba os resultados das partidas (nomes, pontuações e IDs) e diagnostique falhas de integração.
+
+- [ ] Envio automático dos resultados da partida para o *webhook* configurado.
+- [ ] Histórico de registos de pedidos HTTP e gestão independente de múltiplas chaves de API.
